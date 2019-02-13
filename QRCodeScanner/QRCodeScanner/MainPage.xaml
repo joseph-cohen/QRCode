@@ -4,7 +4,7 @@
         <StackLayout>
             <Button Text="Click"  
                     x:Name="btnScan"  
-                    Clicked="btnScan_Clicked"/>  
+                    Clicked="Handle_Clicked"/>  
             <Entry x:Name="txtBarcode"  
                    Placeholder="Text Do scan"/> 
         </StackLayout>

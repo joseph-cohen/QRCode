@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
-using QRCodeScanner.Services;
 
 namespace QRCodeScanner
 {
@@ -15,22 +10,20 @@ namespace QRCodeScanner
             InitializeComponent();
         }
 
-        private async void btnScan_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                var scanner = DependencyService.Get<IQrScanningService>();
-                var result = await scanner.ScanAsync();
-                if (result != null)
-                {
-                    txtBarcode.Text = result;
-                }
-            }
-            catch (Exception ex)
-            {
 
-                throw;
-            }
+        async void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            Console.WriteLine("aaba");
+
+
+
+            var scanner = new ZXing.Mobile.MobileBarcodeScanner();
+
+            var result = await scanner.Scan();
+
+            if (result != null)
+                Console.WriteLine("Scanned Barcode: " + result.Text);
+                txtBarcode.Text = result.Text;
         }
     }
 }
