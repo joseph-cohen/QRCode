@@ -15,7 +15,7 @@ using Xamarin.Forms;
 
 [assembly: Dependency(typeof(QRCodeScanner.Droid.Services.QrScanningService))]
 
-namespace QR_Code_Scanner.Droid.Services
+namespace QRCodeScanner.Droid.Services
 {
     public class QrScanningService : IQrScanningService
     {

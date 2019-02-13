@@ -1,5 +1,7 @@
 ﻿using System;
-namespace QRCodeScanner.Service
+using System.Threading.Tasks;
+
+namespace QRCodeScanner.Services
 {
     public interface IQrScanningService
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using QRCodeScanner.Services;
 
-namespace QR_Code_Scanner
+namespace QRCodeScanner
 {
     public partial class MainPage : ContentPage
     {
